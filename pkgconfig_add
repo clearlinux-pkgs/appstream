@@ -1,0 +1,5 @@
+# This file contains additional pkgconfig build requirements that did
+# not get picked up automatically. One name per line, no whitespace.
+gobject-introspection-1.0
+libxml-2.0
+yaml-0.1
