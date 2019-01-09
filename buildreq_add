@@ -2,3 +2,4 @@
 # picked up automatically. One name per line, no whitespace.
 glibc-bin
 gtk-doc-dev
+qttools-dev

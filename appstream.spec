@@ -4,7 +4,7 @@
 #
 Name     : appstream
 Version  : 0.12.4
-Release  : 2
+Release  : 3
 URL      : https://github.com/ximion/appstream/archive/APPSTREAM_0_12_4.tar.gz
 Source0  : https://github.com/ximion/appstream/archive/APPSTREAM_0_12_4.tar.gz
 Summary  : Access the AppStream component database
@@ -25,6 +25,7 @@ BuildRequires : libxslt-bin
 BuildRequires : pkgconfig(gobject-introspection-1.0)
 BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(yaml-0.1)
+BuildRequires : qttools-dev
 
 %description
 AppStream
@@ -75,6 +76,14 @@ Requires: appstream-man = %{version}-%{release}
 doc components for the appstream package.
 
 
+%package extras
+Summary: extras components for the appstream package.
+Group: Default
+
+%description extras
+extras components for the appstream package.
+
+
 %package lib
 Summary: lib components for the appstream package.
 Group: Libraries
@@ -117,9 +126,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1545507479
+export SOURCE_DATE_EPOCH=1547140787
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --prefix /usr --buildtype=plain -Dstemming=false \
--Dapt-support=false  builddir
+-Dapt-support=false \
+-Dqt=true  builddir
 ninja -v -C builddir
 
 %install
@@ -146,6 +156,23 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files dev
 %defattr(-,root,root,-)
+%exclude /usr/include/AppStreamQt/appstreamqt_export.h
+%exclude /usr/include/AppStreamQt/bundle.h
+%exclude /usr/include/AppStreamQt/category.h
+%exclude /usr/include/AppStreamQt/component.h
+%exclude /usr/include/AppStreamQt/contentrating.h
+%exclude /usr/include/AppStreamQt/icon.h
+%exclude /usr/include/AppStreamQt/image.h
+%exclude /usr/include/AppStreamQt/launchable.h
+%exclude /usr/include/AppStreamQt/metadata.h
+%exclude /usr/include/AppStreamQt/pool.h
+%exclude /usr/include/AppStreamQt/provided.h
+%exclude /usr/include/AppStreamQt/release.h
+%exclude /usr/include/AppStreamQt/screenshot.h
+%exclude /usr/include/AppStreamQt/suggested.h
+%exclude /usr/include/AppStreamQt/translation.h
+%exclude /usr/lib64/cmake/AppStreamQt/AppStreamQtConfig.cmake
+%exclude /usr/lib64/cmake/AppStreamQt/AppStreamQtConfigVersion.cmake
 /usr/include/appstream/appstream.h
 /usr/include/appstream/as-agreement-section.h
 /usr/include/appstream/as-agreement.h
@@ -171,6 +198,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/include/appstream/as-utils.h
 /usr/include/appstream/as-validator-issue.h
 /usr/include/appstream/as-validator.h
+/usr/lib64/libAppStreamQt.so
 /usr/lib64/libappstream.so
 /usr/lib64/pkgconfig/appstream.pc
 
@@ -179,8 +207,32 @@ DESTDIR=%{buildroot} ninja -C builddir install
 %doc /usr/share/doc/appstream/*
 /usr/share/gtk-doc/html/appstream
 
+%files extras
+%defattr(-,root,root,-)
+/usr/include/AppStreamQt/appstreamqt_export.h
+/usr/include/AppStreamQt/bundle.h
+/usr/include/AppStreamQt/category.h
+/usr/include/AppStreamQt/component.h
+/usr/include/AppStreamQt/contentrating.h
+/usr/include/AppStreamQt/icon.h
+/usr/include/AppStreamQt/image.h
+/usr/include/AppStreamQt/launchable.h
+/usr/include/AppStreamQt/metadata.h
+/usr/include/AppStreamQt/pool.h
+/usr/include/AppStreamQt/provided.h
+/usr/include/AppStreamQt/release.h
+/usr/include/AppStreamQt/screenshot.h
+/usr/include/AppStreamQt/suggested.h
+/usr/include/AppStreamQt/translation.h
+/usr/lib64/cmake/AppStreamQt/AppStreamQtConfig.cmake
+/usr/lib64/cmake/AppStreamQt/AppStreamQtConfigVersion.cmake
+/usr/lib64/libAppStreamQt.so.0.12.4
+/usr/lib64/libAppStreamQt.so.2
+
 %files lib
 %defattr(-,root,root,-)
+%exclude /usr/lib64/libAppStreamQt.so.0.12.4
+%exclude /usr/lib64/libAppStreamQt.so.2
 /usr/lib64/libappstream.so.0.12.4
 /usr/lib64/libappstream.so.4
 
