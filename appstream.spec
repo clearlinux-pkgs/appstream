@@ -4,7 +4,7 @@
 #
 Name     : appstream
 Version  : 0.12.5
-Release  : 5
+Release  : 6
 URL      : https://github.com/ximion/appstream/archive/APPSTREAM_0_12_5.tar.gz
 Source0  : https://github.com/ximion/appstream/archive/APPSTREAM_0_12_5.tar.gz
 Summary  : Access the AppStream component database
@@ -126,7 +126,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550014638
+export SOURCE_DATE_EPOCH=1550517971
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --prefix /usr --buildtype=plain -Dstemming=false \
 -Dapt-support=false \
 -Dqt=true  builddir
@@ -211,12 +211,13 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files extras
 %defattr(-,root,root,-)
+/usr/lib64/libAppStreamQt.so.0.12.5
 /usr/lib64/libAppStreamQt.so.2
 
 %files lib
 %defattr(-,root,root,-)
+%exclude /usr/lib64/libAppStreamQt.so.0.12.5
 %exclude /usr/lib64/libAppStreamQt.so.2
-/usr/lib64/libAppStreamQt.so.0.12.5
 /usr/lib64/libappstream.so.0.12.5
 /usr/lib64/libappstream.so.4
 
