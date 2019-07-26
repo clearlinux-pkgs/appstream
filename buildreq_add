@@ -3,3 +3,4 @@
 glibc-bin
 gtk-doc-dev
 qttools-dev
+lmdb-dev
