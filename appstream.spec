@@ -4,7 +4,7 @@
 #
 Name     : appstream
 Version  : 0.12.7
-Release  : 10
+Release  : 11
 URL      : https://github.com/ximion/appstream/archive/v0.12.7/appstream-0.12.7.tar.gz
 Source0  : https://github.com/ximion/appstream/archive/v0.12.7/appstream-0.12.7.tar.gz
 Summary  : Access the AppStream component database
@@ -61,6 +61,7 @@ Group: Development
 Requires: appstream-lib = %{version}-%{release}
 Requires: appstream-bin = %{version}-%{release}
 Requires: appstream-data = %{version}-%{release}
+Requires: appstream-extras = %{version}-%{release}
 Provides: appstream-devel = %{version}-%{release}
 Requires: appstream = %{version}-%{release}
 
@@ -128,21 +129,21 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564171731
+export SOURCE_DATE_EPOCH=1571425564
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
 export FFLAGS="$CFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
-CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --prefix /usr --buildtype=plain -Dstemming=false \
+CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --libdir=lib64 --prefix=/usr --buildtype=plain -Dstemming=false \
 -Dapt-support=false \
 -Dqt=true  builddir
 ninja -v -C builddir
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/appstream
-cp LICENSE.GPLv2 %{buildroot}/usr/share/package-licenses/appstream/LICENSE.GPLv2
-cp LICENSE.LGPLv2.1 %{buildroot}/usr/share/package-licenses/appstream/LICENSE.LGPLv2.1
+cp %{_builddir}/appstream-0.12.7/LICENSE.GPLv2 %{buildroot}/usr/share/package-licenses/appstream/db95910cb27890d60e596e4c622fc3eeba6693fa
+cp %{_builddir}/appstream-0.12.7/LICENSE.LGPLv2.1 %{buildroot}/usr/share/package-licenses/appstream/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang appstream
 
@@ -224,15 +225,13 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files lib
 %defattr(-,root,root,-)
-%exclude /usr/lib64/libAppStreamQt.so.0.12.7
-%exclude /usr/lib64/libAppStreamQt.so.2
 /usr/lib64/libappstream.so.0.12.7
 /usr/lib64/libappstream.so.4
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/appstream/LICENSE.GPLv2
-/usr/share/package-licenses/appstream/LICENSE.LGPLv2.1
+/usr/share/package-licenses/appstream/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+/usr/share/package-licenses/appstream/db95910cb27890d60e596e4c622fc3eeba6693fa
 
 %files man
 %defattr(0644,root,root,0755)
