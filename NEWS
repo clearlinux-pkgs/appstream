@@ -1,3 +1,94 @@
+Version 0.12.9
+~~~~~~~~~~~~~~
+Released: 2019-09-24
+
+Features:
+ * validator: Add method to retrieve list of all tags
+ * ascli: Add command to make a desktop-entry file from a metainfo file
+ * ascli: Add command for YAMl NEWS file conversion
+ * ascli: Convert text NEWS file as well
+ * Recognize Specification/Documentation as new section type when converting NEWS
+ * Augment metainfo file with release information automatically
+ * Use gperf for description markup as well
+ * validator: Make file-extension checks work with complex URIs
+ * Implement support for release issues
+
+Specification:
+ * docs: Actually give a metadata license recommendation
+ * Document the issue tag, which can be part of release information
+ * spec: Explicitly allow WebP for images in metainfo files
+ * Permit requires/recommends relations on firmware, like Fwupd uses
+
+Bugfixes:
+ * docs: Move compulsory_for_desktop where it belongs
+ * docs: Mention how to exclude .desktop files from being processed
+ * Make -Wdeprecated-copy non-fatal in maintainer mode for now
+ * cache: Relax LMDB database max size assumption a bit to help 32bit builds
+ * validator: Don't crash in assertion if we have no filename
+ * Catch more errors when parsing YAML and _ref less often
+ * Interleave translated/untranslated paragraphs when generating metainfo XML
+ * Don't format cached XML
+ * Don't emit language tag for screenshot if it is unnecessary
+ * docs: Add missing documentation to API reference
+ * docs: Document a few missing ascli subcommands
+
+Version 0.12.8
+~~~~~~~~~~~~~~
+Released: 2019-08-16
+
+Notes:
+ * This release changes the output of appstreamcli's validate actions.
+   Please account for that if you were parsing it! The new `--format=yaml`
+   flag for ascli may be interesting to produce machine-readable output.
+
+Features:
+ * Add install-docs meson build option (Antonio Larrosa)
+ * Use more portable deprecation macro
+ * Deprecate AsIssueImportance, use equivalent AsIssueSeverity instead
+ * validator: Implement first bits of tag-based validation
+ * cli: Print terse issue list by default, make long explanation explicit
+ * Assume releases are sorted in metainfo, fail validation on wrong sorting
+ * validator: Allow returning validator output as structured YAML
+ * validator: Refine YAML output and allow CLI to generate it for validate-tree
+ * Improve XML node dumping functions
+ * Permit <em/> and <code/> in description paragraphs and lists
+ * validator: Don't complain about <em/> and <code/> in paragraphs
+ * validator: Validate release info better, check release dates
+ * Recognize more "provides" item types
+ * validator: Check relations for loops with the component itself
+ * its: Handle new inline markup correctly in translations
+ * Add AsVideo object to contain screenshot video data
+ * Implement video support for screenshots
+ * validator: Validate the new video screenshot element
+ * qt: Add support for screenshot videos
+ * validator: The default screenshot must not contain a video
+ * validator: Add methods to query tag severity/explanation explicitly
+ * Implement support for icon-theme components
+
+Specification:
+ * spec: Recommend latest-to-oldest release order for metainfo
+ * spec: Permit use of <em/> and <code/> for description formatting
+ * docs: Clarify when/why to use .appdata.xml instead of .metainfo.xml extensions
+ * docs: Explain why name/summary should not be omitted for app metainfo files
+ * spec: Clarify that ISO 8601 dates in AppStream require the complete date
+ * spec: Specify videos as a screenshot option
+ * spec: Specify an icon-theme component type
+
+Bugfixes:
+ * Change spelling: DBus → D-Bus, MIME types → Media types (Allan Nordhøy)
+ * pool: Use fallback tempdir if user /home does not exist
+ * Restore compatibility with GLib < 2.58
+ * Find LMDB even if no pkg-config file was installed
+ * pool: Improve error reporting on cache refreshes
+ * Fix possible NULL dereference
+ * Fix division-by-zero if there are no components available at all
+ * pool: Fix some error checks when adding components
+ * Report better errors when counting cached components fails
+ * Fix infinite recursion if component has itself listed as an addon
+ * validator: Correctly read line numbers in long files
+ * Catch out-of-context XML reading errors again
+ * Protect against addon extension loops in the cache
+
 Version 0.12.7
 ~~~~~~~~~~~~~~
 Released: 2019-06-16
@@ -1978,4 +2069,4 @@ Version 0.1.0
 Released: 2012-10-02
 
 Notes:
-  * Initial release
+ * Initial release
