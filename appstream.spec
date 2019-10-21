@@ -4,7 +4,7 @@
 #
 Name     : appstream
 Version  : 0.12.9
-Release  : 12
+Release  : 13
 URL      : https://github.com/ximion/appstream/archive/v0.12.9/appstream-0.12.9.tar.gz
 Source0  : https://github.com/ximion/appstream/archive/v0.12.9/appstream-0.12.9.tar.gz
 Summary  : No detailed summary available
@@ -127,7 +127,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571637938
+export SOURCE_DATE_EPOCH=1571680748
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
