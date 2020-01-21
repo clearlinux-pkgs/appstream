@@ -151,6 +151,7 @@ libappstream.so.4:as_component_get_merge_kind
 libappstream.so.4:as_component_get_metadata_license
 libappstream.so.4:as_component_get_name
 libappstream.so.4:as_component_get_name_table
+libappstream.so.4:as_component_get_name_variant_suffix
 libappstream.so.4:as_component_get_origin
 libappstream.so.4:as_component_get_pkgname
 libappstream.so.4:as_component_get_pkgnames
@@ -183,6 +184,7 @@ libappstream.so.4:as_component_is_valid
 libappstream.so.4:as_component_kind_from_string
 libappstream.so.4:as_component_kind_get_type
 libappstream.so.4:as_component_kind_to_string
+libappstream.so.4:as_component_load_from_xml_data
 libappstream.so.4:as_component_new
 libappstream.so.4:as_component_scope_from_string
 libappstream.so.4:as_component_scope_to_string
@@ -199,6 +201,7 @@ libappstream.so.4:as_component_set_kind
 libappstream.so.4:as_component_set_merge_kind
 libappstream.so.4:as_component_set_metadata_license
 libappstream.so.4:as_component_set_name
+libappstream.so.4:as_component_set_name_variant_suffix
 libappstream.so.4:as_component_set_origin
 libappstream.so.4:as_component_set_pkgnames
 libappstream.so.4:as_component_set_priority
@@ -209,8 +212,12 @@ libappstream.so.4:as_component_set_source_pkgname
 libappstream.so.4:as_component_set_summary
 libappstream.so.4:as_component_set_value_flags
 libappstream.so.4:as_component_to_string
+libappstream.so.4:as_component_to_xml_data
+libappstream.so.4:as_content_rating_attribute_to_csm_age
+libappstream.so.4:as_content_rating_get_all_rating_ids
 libappstream.so.4:as_content_rating_get_kind
 libappstream.so.4:as_content_rating_get_minimum_age
+libappstream.so.4:as_content_rating_get_rating_ids
 libappstream.so.4:as_content_rating_get_type
 libappstream.so.4:as_content_rating_get_value
 libappstream.so.4:as_content_rating_new
@@ -218,12 +225,10 @@ libappstream.so.4:as_content_rating_set_kind
 libappstream.so.4:as_content_rating_set_value
 libappstream.so.4:as_content_rating_value_from_string
 libappstream.so.4:as_content_rating_value_to_string
-libappstream.so.4:as_context_get_all_locale_enabled
-libappstream.so.4:as_context_get_architecture
 libappstream.so.4:as_context_get_filename
 libappstream.so.4:as_context_get_format_version
-libappstream.so.4:as_context_get_internal_mode
 libappstream.so.4:as_context_get_locale
+libappstream.so.4:as_context_get_locale_all_enabled
 libappstream.so.4:as_context_get_media_baseurl
 libappstream.so.4:as_context_get_origin
 libappstream.so.4:as_context_get_priority
@@ -231,10 +236,8 @@ libappstream.so.4:as_context_get_style
 libappstream.so.4:as_context_get_type
 libappstream.so.4:as_context_has_media_baseurl
 libappstream.so.4:as_context_new
-libappstream.so.4:as_context_set_architecture
 libappstream.so.4:as_context_set_filename
 libappstream.so.4:as_context_set_format_version
-libappstream.so.4:as_context_set_internal_mode
 libappstream.so.4:as_context_set_locale
 libappstream.so.4:as_context_set_media_baseurl
 libappstream.so.4:as_context_set_origin
@@ -292,6 +295,7 @@ libappstream.so.4:as_image_set_kind
 libappstream.so.4:as_image_set_locale
 libappstream.so.4:as_image_set_url
 libappstream.so.4:as_image_set_width
+libappstream.so.4:as_is_spdx_license_exception_id
 libappstream.so.4:as_is_spdx_license_expression
 libappstream.so.4:as_is_spdx_license_id
 libappstream.so.4:as_issue_get_id
@@ -314,6 +318,7 @@ libappstream.so.4:as_launchable_kind_from_string
 libappstream.so.4:as_launchable_kind_to_string
 libappstream.so.4:as_launchable_new
 libappstream.so.4:as_launchable_set_kind
+libappstream.so.4:as_license_is_free_license
 libappstream.so.4:as_license_is_metadata_license
 libappstream.so.4:as_license_to_spdx_id
 libappstream.so.4:as_markup_convert_simple
@@ -371,7 +376,9 @@ libappstream.so.4:as_pool_get_flags
 libappstream.so.4:as_pool_get_locale
 libappstream.so.4:as_pool_get_type
 libappstream.so.4:as_pool_load
+libappstream.so.4:as_pool_load_async
 libappstream.so.4:as_pool_load_cache_file
+libappstream.so.4:as_pool_load_finish
 libappstream.so.4:as_pool_new
 libappstream.so.4:as_pool_refresh_cache
 libappstream.so.4:as_pool_refresh_system_cache
