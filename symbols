@@ -273,6 +273,12 @@ libappstream.so.4:as_control_kind_from_string
 libappstream.so.4:as_control_kind_get_type
 libappstream.so.4:as_control_kind_to_string
 libappstream.so.4:as_copy_file
+libappstream.so.4:as_curl_check_url_exists
+libappstream.so.4:as_curl_download_bytes
+libappstream.so.4:as_curl_error_quark
+libappstream.so.4:as_curl_get_type
+libappstream.so.4:as_curl_is_url
+libappstream.so.4:as_curl_new
 libappstream.so.4:as_data_id_match_flags_get_type
 libappstream.so.4:as_display_length_kind_from_string
 libappstream.so.4:as_display_length_kind_get_type

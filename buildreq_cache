@@ -1,5 +1,5 @@
-0.14.0
+0.14.1
+curl-dev
 docbook-xml
 gperf
-libsoup-dev
-pkgconfig(libsoup-2.4)
+pkgconfig(libcurl)
