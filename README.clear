@@ -1,0 +1,2 @@
+When updating to a new version, the `extras` needs to be updated as well to
+account for the new libAppStreamQt library version.
