@@ -1,6 +1,9 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
+curl-dev
+docbook-xml
 glibc-bin
+gperf
 gtk-doc-dev
-qttools-dev
 lmdb-dev
+qttools-dev
