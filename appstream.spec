@@ -4,7 +4,7 @@
 #
 Name     : appstream
 Version  : 0.14.3
-Release  : 21
+Release  : 22
 URL      : https://github.com/ximion/appstream/archive/v0.14.3/appstream-0.14.3.tar.gz
 Source0  : https://github.com/ximion/appstream/archive/v0.14.3/appstream-0.14.3.tar.gz
 Summary  : No detailed summary available
@@ -125,7 +125,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1615230423
+export SOURCE_DATE_EPOCH=1615230692
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -233,11 +233,11 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files extras
 %defattr(-,root,root,-)
+/usr/lib64/libAppStreamQt.so.0.14.3
 /usr/lib64/libAppStreamQt.so.2
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/libAppStreamQt.so.0.14.3
 /usr/lib64/libappstream.so.0.14.3
 /usr/lib64/libappstream.so.4
 
