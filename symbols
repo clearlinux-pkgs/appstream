@@ -311,6 +311,7 @@ libappstream.so.4:as_get_current_distro_component_id
 libappstream.so.4:as_get_default_categories
 libappstream.so.4:as_get_license_url
 libappstream.so.4:as_gstring_replace
+libappstream.so.4:as_gstring_replace2
 libappstream.so.4:as_icon_get_filename
 libappstream.so.4:as_icon_get_height
 libappstream.so.4:as_icon_get_kind
@@ -374,7 +375,9 @@ libappstream.so.4:as_launchable_new
 libappstream.so.4:as_launchable_set_kind
 libappstream.so.4:as_license_is_free_license
 libappstream.so.4:as_license_is_metadata_license
+libappstream.so.4:as_license_is_metadata_license_id
 libappstream.so.4:as_license_to_spdx_id
+libappstream.so.4:as_locale_strip_encoding
 libappstream.so.4:as_markup_convert_simple
 libappstream.so.4:as_markup_strsplit_words
 libappstream.so.4:as_merge_kind_from_string
@@ -478,6 +481,7 @@ libappstream.so.4:as_provided_kind_to_string
 libappstream.so.4:as_provided_new
 libappstream.so.4:as_provided_set_kind
 libappstream.so.4:as_ptr_array_to_str
+libappstream.so.4:as_random_alnum_string
 libappstream.so.4:as_ref_string_assign_safe
 libappstream.so.4:as_ref_string_release
 libappstream.so.4:as_relation_compare_from_string
