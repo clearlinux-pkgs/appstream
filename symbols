@@ -129,6 +129,7 @@ libappstream.so.4:as_component_add_screenshot
 libappstream.so.4:as_component_add_suggested
 libappstream.so.4:as_component_add_translation
 libappstream.so.4:as_component_add_url
+libappstream.so.4:as_component_clear_languages
 libappstream.so.4:as_component_get_active_locale
 libappstream.so.4:as_component_get_addons
 libappstream.so.4:as_component_get_agreement_by_kind
@@ -219,6 +220,7 @@ libappstream.so.4:as_component_set_metadata_license
 libappstream.so.4:as_component_set_name
 libappstream.so.4:as_component_set_name_variant_suffix
 libappstream.so.4:as_component_set_origin
+libappstream.so.4:as_component_set_pkgname
 libappstream.so.4:as_component_set_pkgnames
 libappstream.so.4:as_component_set_priority
 libappstream.so.4:as_component_set_project_group
@@ -728,3 +730,17 @@ libappstream.so.4:as_video_set_height
 libappstream.so.4:as_video_set_locale
 libappstream.so.4:as_video_set_url
 libappstream.so.4:as_video_set_width
+libappstream.so.4:as_yaml_emit_entry
+libappstream.so.4:as_yaml_emit_entry_timestamp
+libappstream.so.4:as_yaml_emit_entry_uint64
+libappstream.so.4:as_yaml_emit_long_entry
+libappstream.so.4:as_yaml_emit_long_entry_literal
+libappstream.so.4:as_yaml_emit_scalar
+libappstream.so.4:as_yaml_emit_scalar_key
+libappstream.so.4:as_yaml_emit_scalar_raw
+libappstream.so.4:as_yaml_emit_scalar_uint64
+libappstream.so.4:as_yaml_emit_sequence
+libappstream.so.4:as_yaml_mapping_end
+libappstream.so.4:as_yaml_mapping_start
+libappstream.so.4:as_yaml_sequence_end
+libappstream.so.4:as_yaml_sequence_start
