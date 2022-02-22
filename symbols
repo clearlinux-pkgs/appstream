@@ -40,6 +40,13 @@ libappstream.so.4:as_artifact_set_filename
 libappstream.so.4:as_artifact_set_kind
 libappstream.so.4:as_artifact_set_platform
 libappstream.so.4:as_artifact_set_size
+libappstream.so.4:as_branding_color_iter_init
+libappstream.so.4:as_branding_color_iter_next
+libappstream.so.4:as_branding_get_color
+libappstream.so.4:as_branding_get_type
+libappstream.so.4:as_branding_new
+libappstream.so.4:as_branding_remove_color
+libappstream.so.4:as_branding_set_color
 libappstream.so.4:as_bundle_get_id
 libappstream.so.4:as_bundle_get_kind
 libappstream.so.4:as_bundle_get_type
@@ -107,6 +114,12 @@ libappstream.so.4:as_checksum_new
 libappstream.so.4:as_checksum_new_for_kind_value
 libappstream.so.4:as_checksum_set_kind
 libappstream.so.4:as_checksum_set_value
+libappstream.so.4:as_color_kind_from_string
+libappstream.so.4:as_color_kind_get_type
+libappstream.so.4:as_color_kind_to_string
+libappstream.so.4:as_color_scheme_kind_from_string
+libappstream.so.4:as_color_scheme_kind_get_type
+libappstream.so.4:as_color_scheme_kind_to_string
 libappstream.so.4:as_component_add_addon
 libappstream.so.4:as_component_add_agreement
 libappstream.so.4:as_component_add_bundle
@@ -133,6 +146,7 @@ libappstream.so.4:as_component_get_addons
 libappstream.so.4:as_component_get_agreement_by_kind
 libappstream.so.4:as_component_get_agreements
 libappstream.so.4:as_component_get_branch
+libappstream.so.4:as_component_get_branding
 libappstream.so.4:as_component_get_bundle
 libappstream.so.4:as_component_get_bundles
 libappstream.so.4:as_component_get_categories
@@ -143,6 +157,7 @@ libappstream.so.4:as_component_get_context
 libappstream.so.4:as_component_get_custom
 libappstream.so.4:as_component_get_custom_value
 libappstream.so.4:as_component_get_data_id
+libappstream.so.4:as_component_get_date_eol
 libappstream.so.4:as_component_get_description
 libappstream.so.4:as_component_get_desktop_id
 libappstream.so.4:as_component_get_developer_name
@@ -184,6 +199,7 @@ libappstream.so.4:as_component_get_suggested
 libappstream.so.4:as_component_get_summary
 libappstream.so.4:as_component_get_summary_table
 libappstream.so.4:as_component_get_supports
+libappstream.so.4:as_component_get_timestamp_eol
 libappstream.so.4:as_component_get_translations
 libappstream.so.4:as_component_get_type
 libappstream.so.4:as_component_get_url
@@ -203,6 +219,7 @@ libappstream.so.4:as_component_load_from_bytes
 libappstream.so.4:as_component_load_from_xml_data
 libappstream.so.4:as_component_new
 libappstream.so.4:as_component_remove_tag
+libappstream.so.4:as_component_sanitize_date_eol
 libappstream.so.4:as_component_scope_from_string
 libappstream.so.4:as_component_scope_get_type
 libappstream.so.4:as_component_scope_to_string
@@ -210,8 +227,10 @@ libappstream.so.4:as_component_search_matches
 libappstream.so.4:as_component_search_matches_all
 libappstream.so.4:as_component_set_active_locale
 libappstream.so.4:as_component_set_branch
+libappstream.so.4:as_component_set_branding
 libappstream.so.4:as_component_set_compulsory_for_desktop
 libappstream.so.4:as_component_set_data_id
+libappstream.so.4:as_component_set_date_eol
 libappstream.so.4:as_component_set_description
 libappstream.so.4:as_component_set_developer_name
 libappstream.so.4:as_component_set_id
@@ -285,6 +304,7 @@ libappstream.so.4:as_curl_error_quark
 libappstream.so.4:as_curl_get_type
 libappstream.so.4:as_curl_is_url
 libappstream.so.4:as_curl_new
+libappstream.so.4:as_curl_set_cainfo
 libappstream.so.4:as_data_id_match_flags_get_type
 libappstream.so.4:as_desktop_entry_parse_data
 libappstream.so.4:as_display_length_kind_from_string
