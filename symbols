@@ -163,6 +163,7 @@ libappstream.so.4:as_component_get_desktop_id
 libappstream.so.4:as_component_get_developer_name
 libappstream.so.4:as_component_get_extends
 libappstream.so.4:as_component_get_icon_by_size
+libappstream.so.4:as_component_get_icon_stock
 libappstream.so.4:as_component_get_icons
 libappstream.so.4:as_component_get_id
 libappstream.so.4:as_component_get_keywords
@@ -219,7 +220,6 @@ libappstream.so.4:as_component_load_from_bytes
 libappstream.so.4:as_component_load_from_xml_data
 libappstream.so.4:as_component_new
 libappstream.so.4:as_component_remove_tag
-libappstream.so.4:as_component_sanitize_date_eol
 libappstream.so.4:as_component_scope_from_string
 libappstream.so.4:as_component_scope_get_type
 libappstream.so.4:as_component_scope_to_string
