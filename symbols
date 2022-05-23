@@ -635,6 +635,7 @@ libappstream.so.4:as_review_set_version
 libappstream.so.4:as_sanitize_text_spaces
 libappstream.so.4:as_screenshot_add_image
 libappstream.so.4:as_screenshot_add_video
+libappstream.so.4:as_screenshot_clear_images
 libappstream.so.4:as_screenshot_get_active_locale
 libappstream.so.4:as_screenshot_get_caption
 libappstream.so.4:as_screenshot_get_image
@@ -644,6 +645,7 @@ libappstream.so.4:as_screenshot_get_kind
 libappstream.so.4:as_screenshot_get_media_kind
 libappstream.so.4:as_screenshot_get_type
 libappstream.so.4:as_screenshot_get_videos
+libappstream.so.4:as_screenshot_get_videos_all
 libappstream.so.4:as_screenshot_is_valid
 libappstream.so.4:as_screenshot_kind_from_string
 libappstream.so.4:as_screenshot_kind_get_type
@@ -715,11 +717,15 @@ libappstream.so.4:as_utils_is_tld
 libappstream.so.4:as_utils_is_writable
 libappstream.so.4:as_utils_locale_is_compatible
 libappstream.so.4:as_utils_sort_components_into_categories
+libappstream.so.4:as_validator_add_override
 libappstream.so.4:as_validator_clear_issues
+libappstream.so.4:as_validator_error_get_type
+libappstream.so.4:as_validator_error_quark
 libappstream.so.4:as_validator_get_check_urls
 libappstream.so.4:as_validator_get_issues
 libappstream.so.4:as_validator_get_issues_per_file
 libappstream.so.4:as_validator_get_report_yaml
+libappstream.so.4:as_validator_get_strict
 libappstream.so.4:as_validator_get_tag_explanation
 libappstream.so.4:as_validator_get_tag_severity
 libappstream.so.4:as_validator_get_tags
@@ -747,6 +753,7 @@ libappstream.so.4:as_validator_issue_set_severity
 libappstream.so.4:as_validator_issue_set_tag
 libappstream.so.4:as_validator_new
 libappstream.so.4:as_validator_set_check_urls
+libappstream.so.4:as_validator_set_strict
 libappstream.so.4:as_validator_validate_bytes
 libappstream.so.4:as_validator_validate_data
 libappstream.so.4:as_validator_validate_file
