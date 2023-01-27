@@ -1,3 +1,5 @@
-0.15.6
+0.16.0
 itstool
+pkgconfig(libsystemd)
+pkgconfig(systemd)
 pkgconfig(xmlb)

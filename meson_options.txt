@@ -3,6 +3,11 @@ option('stemming',
        value : true,
        description : 'Use stemming while searching. Requires Snowball (libstemmer)'
 )
+option('systemd',
+       type : 'boolean',
+       value : true,
+       description : 'Build with systemd support'
+)
 option('vapi',
        type : 'boolean',
        value : false,
