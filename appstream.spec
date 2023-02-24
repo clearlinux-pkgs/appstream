@@ -4,7 +4,7 @@
 #
 Name     : appstream
 Version  : 0.16.1
-Release  : 36
+Release  : 37
 URL      : https://github.com/ximion/appstream/archive/v0.16.1/appstream-0.16.1.tar.gz
 Source0  : https://github.com/ximion/appstream/archive/v0.16.1/appstream-0.16.1.tar.gz
 Summary  : No detailed summary available
@@ -64,7 +64,6 @@ Group: Development
 Requires: appstream-lib = %{version}-%{release}
 Requires: appstream-bin = %{version}-%{release}
 Requires: appstream-data = %{version}-%{release}
-Requires: appstream-extras = %{version}-%{release}
 Provides: appstream-devel = %{version}-%{release}
 Requires: appstream = %{version}-%{release}
 
@@ -79,14 +78,6 @@ Requires: appstream-man = %{version}-%{release}
 
 %description doc
 doc components for the appstream package.
-
-
-%package extras
-Summary: extras components for the appstream package.
-Group: Default
-
-%description extras
-extras components for the appstream package.
 
 
 %package lib
@@ -141,7 +132,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676914242
+export SOURCE_DATE_EPOCH=1677199889
 unset LD_AS_NEEDED
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
@@ -253,13 +244,10 @@ DESTDIR=%{buildroot} ninja -C builddir install
 %doc /usr/share/doc/appstream/*
 /usr/share/gtk-doc/html/appstream
 
-%files extras
-%defattr(-,root,root,-)
-/usr/lib64/libAppStreamQt.so.2
-
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libAppStreamQt.so.0.16.1
+/usr/lib64/libAppStreamQt.so.2
 /usr/lib64/libappstream.so.0.16.1
 /usr/lib64/libappstream.so.4
 
