@@ -368,6 +368,7 @@ libAppStreamQt.so.2:_ZNK9AppStream4Pool22componentsByLaunchableENS_10Launchable4
 libAppStreamQt.so.2:_ZNK9AppStream4Pool5flagsEv
 libAppStreamQt.so.2:_ZNK9AppStream4Pool6asPoolEv
 libAppStreamQt.so.2:_ZNK9AppStream4Pool6searchERK7QString
+libAppStreamQt.so.2:_ZNK9AppStream4Pool7isEmptyEv
 libAppStreamQt.so.2:_ZNK9AppStream4Pool9lastErrorEv
 libAppStreamQt.so.2:_ZNK9AppStream5Image3urlEv
 libAppStreamQt.so.2:_ZNK9AppStream5Image4kindEv
@@ -633,6 +634,7 @@ libappstream.so.4:as_cache_add_masking_components
 libappstream.so.4:as_cache_clear
 libappstream.so.4:as_cache_error_quark
 libappstream.so.4:as_cache_flags_get_type
+libappstream.so.4:as_cache_get_component_count
 libappstream.so.4:as_cache_get_components_all
 libappstream.so.4:as_cache_get_components_by_bundle_id
 libappstream.so.4:as_cache_get_components_by_categories
@@ -645,6 +647,7 @@ libappstream.so.4:as_cache_get_ctime
 libappstream.so.4:as_cache_get_locale
 libappstream.so.4:as_cache_get_prefer_os_metainfo
 libappstream.so.4:as_cache_get_type
+libappstream.so.4:as_cache_is_empty
 libappstream.so.4:as_cache_load_section_for_key
 libappstream.so.4:as_cache_load_section_for_path
 libappstream.so.4:as_cache_mask_by_data_id
@@ -994,6 +997,8 @@ libappstream.so.4:as_license_is_free_license
 libappstream.so.4:as_license_is_metadata_license
 libappstream.so.4:as_license_is_metadata_license_id
 libappstream.so.4:as_license_to_spdx_id
+libappstream.so.4:as_locale_is_bcp47
+libappstream.so.4:as_locale_is_posix
 libappstream.so.4:as_locale_strip_encoding
 libappstream.so.4:as_markup_convert_simple
 libappstream.so.4:as_markup_strsplit_words
@@ -1079,6 +1084,7 @@ libappstream.so.4:as_pool_get_components_gir
 libappstream.so.4:as_pool_get_flags
 libappstream.so.4:as_pool_get_locale
 libappstream.so.4:as_pool_get_type
+libappstream.so.4:as_pool_is_empty
 libappstream.so.4:as_pool_load
 libappstream.so.4:as_pool_load_async
 libappstream.so.4:as_pool_load_cache_file
@@ -1351,6 +1357,7 @@ libappstream.so.4:as_utils_is_root
 libappstream.so.4:as_utils_is_tld
 libappstream.so.4:as_utils_is_writable
 libappstream.so.4:as_utils_locale_is_compatible
+libappstream.so.4:as_utils_posix_locale_to_bcp47
 libappstream.so.4:as_utils_sort_components_into_categories
 libappstream.so.4:as_validator_add_override
 libappstream.so.4:as_validator_add_release_bytes
