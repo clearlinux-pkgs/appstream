@@ -1,4 +1,4 @@
-libQt5Core.so.5
+libQt6Core.so.6
 libc.so.6
 libcurl.so.4
 libgcc_s.so.1
@@ -10,3 +10,4 @@ libsystemd.so.0
 libxml2.so.2
 libxmlb.so.2
 libyaml-0.so.2
+libzstd.so.1

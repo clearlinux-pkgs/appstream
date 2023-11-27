@@ -6,4 +6,4 @@ glibc-bin
 gperf
 gtk-doc-dev
 lmdb-dev
-qttools-dev
+qt6tools-dev
