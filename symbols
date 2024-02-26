@@ -302,6 +302,7 @@ libAppStreamQt.so.3:_ZN9AppStream9Component14checkRelationsEPNS_10SystemInfoEPNS
 libAppStreamQt.so.3:_ZN9AppStream9Component14setDescriptionERK7QStringS3_
 libAppStreamQt.so.3:_ZN9AppStream9Component15setPackageNamesERK5QListI7QStringE
 libAppStreamQt.so.3:_ZN9AppStream9Component15setProjectGroupERK7QString
+libAppStreamQt.so.3:_ZN9AppStream9Component15sortScreenshotsERK7QStringS3_b
 libAppStreamQt.so.3:_ZN9AppStream9Component15stringToUrlKindERK7QString
 libAppStreamQt.so.3:_ZN9AppStream9Component15urlKindToStringENS0_7UrlKindE
 libAppStreamQt.so.3:_ZN9AppStream9Component16addContentRatingERKNS_13ContentRatingE
@@ -502,6 +503,7 @@ libAppStreamQt.so.3:_ZNK9AppStream8RelationeqERKS0_
 libAppStreamQt.so.3:_ZNK9AppStream9Component10categoriesEv
 libAppStreamQt.so.3:_ZNK9AppStream9Component10launchableENS_10Launchable4KindE
 libAppStreamQt.so.3:_ZNK9AppStream9Component10recommendsEv
+libAppStreamQt.so.3:_ZNK9AppStream9Component11customValueERK7QString
 libAppStreamQt.so.3:_ZNK9AppStream9Component11descriptionEv
 libAppStreamQt.so.3:_ZNK9AppStream9Component11hasCategoryERK7QString
 libAppStreamQt.so.3:_ZNK9AppStream9Component12packageNamesEv
@@ -970,10 +972,12 @@ libappstream.so.5:as_curl_check_url_exists
 libappstream.so.5:as_curl_download_bytes
 libappstream.so.5:as_curl_download_to_filename
 libappstream.so.5:as_curl_error_quark
+libappstream.so.5:as_curl_get_retry_count
 libappstream.so.5:as_curl_get_type
 libappstream.so.5:as_curl_is_url
 libappstream.so.5:as_curl_new
 libappstream.so.5:as_curl_set_cainfo
+libappstream.so.5:as_curl_set_retry_count
 libappstream.so.5:as_data_id_match_flags_get_type
 libappstream.so.5:as_desktop_entry_parse_data
 libappstream.so.5:as_developer_get_id
