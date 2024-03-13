@@ -7,7 +7,7 @@
 #
 Name     : appstream
 Version  : 1.0.2
-Release  : 42
+Release  : 43
 URL      : https://github.com/ximion/appstream/archive/v1.0.2/appstream-1.0.2.tar.gz
 Source0  : https://github.com/ximion/appstream/archive/v1.0.2/appstream-1.0.2.tar.gz
 Summary  : No detailed summary available
